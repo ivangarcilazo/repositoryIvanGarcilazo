@@ -1,0 +1,6 @@
+
+@mixin font ($weigth-font,$style-font){
+    font-family: "lato";
+    font-weight: $weigth-font;
+    font-style: $style-font;
+}
