@@ -70,15 +70,25 @@ body{
     .nav-1{
         font-size:map-get($font-sizes, vw-g );
         display:flex;
+        flex-direction: column;
         justify-content: center;
-        align-self:center;
+        align-items:center;
         flex-wrap: nowrap;
         font-family: "lato";
         font-weight: bolder;
         text-decoration: none;
-        color: rgba(39, 39, 39, 0.774);
+        color: rgba(39, 39, 39, 0.616);
         margin-left: 1rem;
         transition: all 0.3s;
+        .bottom__line__nav__idx{
+            height: 5px;
+            width: 0%;
+            background-color: map-get($colores-g, primario );
+            transition: all 0.5s;
+        }
+        &:hover .bottom__line__nav__idx{
+            width: 50%;
+        }
     }
     .nav-1:hover{
         color: black;
@@ -110,40 +120,45 @@ body{
 .bg-3{
     background-color: black;
     .title_bg-3{
-        font-size: 8vw;
-        display:inline-block;
-        font-family: "lato";
-        font-weight: bolder;
-        text-decoration: none;
+        @include title(principal);
         color: white;
-        margin-left: 1rem;
-        text-decoration: underline 0.5vw #43F7AB;
+        margin-left: 5vw;
     }
     .container-section-3{
         display: flex;
         align-items: center;
         justify-content: center;
         flex-direction: column;
-
-        .container-logo{
-        display: flex;
-        gap: 0.8rem;
-        transform: translate(0rem, -3rem);
-            .prop__img__logo__s3{
-                width: 14vw;
+        padding-top: 2vw;
+        
+        .container__logos__s3{
+            .container-logo-1{
+                display: flex;
+                gap: 0.8rem;
+                transform: translate(0rem, -3rem);
+                    .prop__img__logo__s3{
+                        width: 12vw;
+                    }
+                }
+            .container-logo-2{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 0.8rem;
+                .prop__img__logo-2__s3{
+                    width: 12vw;
+                }
             }
+                 
         }
-            
-        .container-logo-2{
-            display: flex;
-            gap: 0.8rem;
-            .prop__img__logo-2__s3{
-                width: 14vw;
-            }
+        .llave__s3{
+            width: 76vw;
         }
-        .svg-2__section-3{
-        transform:translate(0rem, -2rem);
-        }       
+        .llave-pyc__s3-90{
+            width: 76vw;
+            transform:translate(0rem, -2rem);
+        }  
+        
     }
     .waves-container-s3{
         display: flex;
@@ -167,6 +182,7 @@ body{
 
     .container__proyects__S4{
         margin-top: 1.3rem;
+        margin-bottom: 10rem;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -174,19 +190,10 @@ body{
        
         /*Texto Titulos*/
         .title__princ__proyects__S4{
-            color: black;
-            font-family: "lato";
-            font-weight: bolder;
-            text-decoration: underline map-get($colores-g, primario);
-            font-size: 7vw;
-            
-        
+            @include title(principal);
         }
         .title__sec__proyects__S4{
-            font-family: "lato";
-            font-size: 8vw;
-            font-style: italic;
-            font-weight: lighter;
+            @include title(sec);
         }
     }
             
@@ -211,7 +218,65 @@ body{
             border-radius: .3rem;
         }
     }
+    
+    /*Contenedor de seccion servicios*/
+    .container__services__S4{
+       display: flex;
+       flex-direction:column;
+
+        .container__title__services__S4{
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            margin-left: 9vw;
+            @media screen and (max-width:768px) {
+                margin-left: 5vw;
+            }
+
+            .title__princ__services__S4{
+            @include title(principal);
+            }
+            .title__sec__services__S4{
+                @include title(sec);
+            }
+
+            .llave__services__S4{
+                width: 3vw;
+            }
+        }
+
+        .container__txt__info__services__S4{
+            margin-top: 3vw;
+            margin-bottom:3vw;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-self: center;
+          .let__sec__services__S4{
+            @include title (sec);
+            font-size: 6vw;
+            }
+            .servicios_txt__princ__services__S4{
+                @include title (principal);
+                text-decoration: none;
+                font-size: 5vw;
+            }  
+        }
         
+        .container__llave__pyc__services__S4{
+            @extend .container__title__services__S4;
+            .llave__services__S4-180{
+                width: 3vw;
+                transform: rotate(180deg);
+            }
+            .pyc-2__s4{
+                width: 3vw;
+            }
+        }
+        
+    }
+        
+    
             
 }
 

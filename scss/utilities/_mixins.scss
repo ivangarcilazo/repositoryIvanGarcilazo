@@ -4,3 +4,19 @@
     font-weight: $weigth-font;
     font-style: $style-font;
 }
+
+@mixin title ($type) {
+    @if ($type=="principal") {
+        color: black;
+        font-family: "lato";
+        font-weight: bolder;
+        text-decoration: underline map-get($colores-g, primario);
+        font-size: 7vw
+    }
+    @else if ($type=="sec"){
+        font-family: "lato";
+        font-size: 8vw;
+        font-style: italic;
+        font-weight: lighter
+    }
+}

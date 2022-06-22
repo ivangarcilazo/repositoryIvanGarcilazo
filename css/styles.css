@@ -5,7 +5,7 @@
 
 html {
   scroll-behavior: smooth;
-  scroll-padding: 2.5rem; }
+  scroll-padding: 1rem; }
 
 body {
   height: 100vh; }
@@ -68,15 +68,23 @@ body {
   .bg-2 .nav-1, .bg-2 .nav-2, .bg-2 .nav-3, .bg-2 .nav-4, .bg-2 .nav-5 {
     font-size: 10vw;
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-self: center;
+    align-items: center;
     flex-wrap: nowrap;
     font-family: "lato";
     font-weight: bolder;
     text-decoration: none;
-    color: rgba(39, 39, 39, 0.774);
+    color: rgba(39, 39, 39, 0.616);
     margin-left: 1rem;
     transition: all 0.3s; }
+    .bg-2 .nav-1 .bottom__line__nav__idx, .bg-2 .nav-2 .bottom__line__nav__idx, .bg-2 .nav-3 .bottom__line__nav__idx, .bg-2 .nav-4 .bottom__line__nav__idx, .bg-2 .nav-5 .bottom__line__nav__idx {
+      height: 5px;
+      width: 0%;
+      background-color: #43F7AB;
+      transition: all 0.5s; }
+    .bg-2 .nav-1:hover .bottom__line__nav__idx, .bg-2 .nav-2:hover .bottom__line__nav__idx, .bg-2 .nav-3:hover .bottom__line__nav__idx, .bg-2 .nav-4:hover .bottom__line__nav__idx, .bg-2 .nav-5:hover .bottom__line__nav__idx {
+      width: 50%; }
   .bg-2 .nav-1:hover, .bg-2 .nav-2:hover, .bg-2 .nav-3:hover, .bg-2 .nav-4:hover, .bg-2 .nav-5:hover {
     color: black; }
   .bg-2 .svg-1_section-2 {
@@ -90,31 +98,36 @@ body {
 .bg-3 {
   background-color: black; }
   .bg-3 .title_bg-3 {
-    font-size: 8vw;
-    display: inline-block;
+    color: black;
     font-family: "lato";
     font-weight: bolder;
-    text-decoration: none;
+    text-decoration: underline #43F7AB;
+    font-size: 7vw;
     color: white;
-    margin-left: 1rem;
-    text-decoration: underline 0.5vw #43F7AB; }
+    margin-left: 5vw; }
   .bg-3 .container-section-3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    flex-direction: column; }
-    .bg-3 .container-section-3 .container-logo {
+    flex-direction: column;
+    padding-top: 2vw; }
+    .bg-3 .container-section-3 .container__logos__s3 .container-logo-1 {
       display: flex;
       gap: 0.8rem;
       transform: translate(0rem, -3rem); }
-      .bg-3 .container-section-3 .container-logo .prop__img__logo__s3 {
-        width: 14vw; }
-    .bg-3 .container-section-3 .container-logo-2 {
+      .bg-3 .container-section-3 .container__logos__s3 .container-logo-1 .prop__img__logo__s3 {
+        width: 12vw; }
+    .bg-3 .container-section-3 .container__logos__s3 .container-logo-2 {
       display: flex;
+      justify-content: center;
+      align-items: center;
       gap: 0.8rem; }
-      .bg-3 .container-section-3 .container-logo-2 .prop__img__logo-2__s3 {
-        width: 14vw; }
-    .bg-3 .container-section-3 .svg-2__section-3 {
+      .bg-3 .container-section-3 .container__logos__s3 .container-logo-2 .prop__img__logo-2__s3 {
+        width: 12vw; }
+    .bg-3 .container-section-3 .llave__s3 {
+      width: 76vw; }
+    .bg-3 .container-section-3 .llave-pyc__s3-90 {
+      width: 76vw;
       transform: translate(0rem, -2rem); }
   .bg-3 .waves-container-s3 {
     display: flex;
@@ -129,9 +142,11 @@ body {
 .bg-4 {
   position: relative;
   bottom: 7rem;
-  background-color: white; }
+  background-color: white;
+  /*Contenedor de seccion servicios*/ }
   .bg-4 .container__proyects__S4 {
     margin-top: 1.3rem;
+    margin-bottom: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -164,3 +179,53 @@ body {
       margin: .3rem;
       width: 23vw;
       border-radius: .3rem; }
+  .bg-4 .container__services__S4 {
+    display: flex;
+    flex-direction: column; }
+    .bg-4 .container__services__S4 .container__title__services__S4, .bg-4 .container__services__S4 .container__llave__pyc__services__S4 {
+      display: flex;
+      justify-content: start;
+      align-items: center;
+      margin-left: 9vw; }
+      @media screen and (max-width: 768px) {
+        .bg-4 .container__services__S4 .container__title__services__S4, .bg-4 .container__services__S4 .container__llave__pyc__services__S4 {
+          margin-left: 5vw; } }
+      .bg-4 .container__services__S4 .container__title__services__S4 .title__princ__services__S4, .bg-4 .container__services__S4 .container__llave__pyc__services__S4 .title__princ__services__S4 {
+        color: black;
+        font-family: "lato";
+        font-weight: bolder;
+        text-decoration: underline #43F7AB;
+        font-size: 7vw; }
+      .bg-4 .container__services__S4 .container__title__services__S4 .title__sec__services__S4, .bg-4 .container__services__S4 .container__llave__pyc__services__S4 .title__sec__services__S4 {
+        font-family: "lato";
+        font-size: 8vw;
+        font-style: italic;
+        font-weight: lighter; }
+      .bg-4 .container__services__S4 .container__title__services__S4 .llave__services__S4, .bg-4 .container__services__S4 .container__llave__pyc__services__S4 .llave__services__S4 {
+        width: 3vw; }
+    .bg-4 .container__services__S4 .container__txt__info__services__S4 {
+      margin-top: 3vw;
+      margin-bottom: 3vw;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-self: center; }
+      .bg-4 .container__services__S4 .container__txt__info__services__S4 .let__sec__services__S4 {
+        font-family: "lato";
+        font-size: 8vw;
+        font-style: italic;
+        font-weight: lighter;
+        font-size: 6vw; }
+      .bg-4 .container__services__S4 .container__txt__info__services__S4 .servicios_txt__princ__services__S4 {
+        color: black;
+        font-family: "lato";
+        font-weight: bolder;
+        text-decoration: underline #43F7AB;
+        font-size: 7vw;
+        text-decoration: none;
+        font-size: 5vw; }
+    .bg-4 .container__services__S4 .container__llave__pyc__services__S4 .llave__services__S4-180 {
+      width: 3vw;
+      transform: rotate(180deg); }
+    .bg-4 .container__services__S4 .container__llave__pyc__services__S4 .pyc-2__s4 {
+      width: 3vw; }
