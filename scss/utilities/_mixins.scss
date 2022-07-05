@@ -1,0 +1,37 @@
+
+@mixin font ($weigth-font,$style-font){
+    font-family: "lato";
+    font-weight: $weigth-font;
+    font-style: $style-font;
+}
+
+@mixin title ($type) {
+    @if ($type=="principal") {
+        color: black;
+        font-family: "lato";
+        font-weight: bolder;
+        text-decoration: underline map-get($colores-g, primario) .8vw;
+        font-size: 7vw
+       
+    }
+    @else if ($type=="sec"){
+        font-family: "lato";
+        font-size: 8vw;
+        font-style: italic;
+        font-weight: lighter
+    }
+}
+
+@mixin waves ($type) {
+        @if($type=="primary"){
+        position: absolute;
+        filter: drop-shadow(0 -0.2rem 0.08rem rgba(0, 0, 0, 0.459));
+        transform: translate(0rem, 0.7rem);}
+        @else if ($type=="secundary"){
+            position: absolute;
+            filter: drop-shadow(0 -0.2rem 0.08rem rgba(0, 0, 0, 0.459));
+            transform: translate(0rem, 1.3rem);
+        }
+}
+
+

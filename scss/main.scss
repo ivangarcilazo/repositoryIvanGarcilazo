@@ -1,0 +1,15 @@
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+    scroll-padding: 0.2rem;
+}
+
+@import "utilities/mixins";
+@import "utilities/variables";
+
+@import "views/index";
+
